@@ -4,4 +4,4 @@ from athlete_events import models
 
 class AthletesEventsViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.AthletesEventsSerializer
-    queryset = models.AthletesEvents.objects.all()
+    queryset = models.Athlete.objects.all()

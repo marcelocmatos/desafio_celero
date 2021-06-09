@@ -4,5 +4,5 @@ from athlete_events import models
 
 class AthletesEventsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.AthletesEvents
+        model = models.Athlete
         fields = '__all__'
