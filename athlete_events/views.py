@@ -8,7 +8,8 @@ def upload_data(request):
     template = 'data_upload.html'
     prompt = {
         'order': 'Order of the CSV must be: "Name", "Sex", "Age", "Height", "Weight",\
-            "Team", "NOC", "Games", "Year", "Season", "City", "Sport", "Event", "Medal"'
+            "Team", "NOC", "Games", "Year", "Season", "City", "Sport", "Event", "Medal".',
+        'warning': 'ONLY ACCPETS CSV FILES!!!'
         }
     if request.method == 'GET':
         return render(request, template, prompt)
@@ -36,4 +37,5 @@ def upload_data(request):
             event = item[13],
             medal = item[14]    
         )
-    return render(request, template)
+    message = messages.info(request, "File Uploaded Successfuly")
+    return render(request, template, message)

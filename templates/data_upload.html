@@ -6,24 +6,24 @@ CSV File Upload
 
 {% block content%}
 
-{% if messages %}
-    {% for message in messages %}
-        <div>
-            <strong>{{message|safe}}</strong>
-        </div>
-    {% endfor %}
-{% else %}
-<h6 class="bd-title" id="content" >{{order}}</h6>
-<br>
-<p>ONLY ACCPETS CSV FILES!!!!</p>
-<form method = "POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <div class="input-group mb-3" >
-        <input type="file" class="form-control" id="inputGroupFile02" name="file">
-        <button type="submit" class="btn btn-outline-light">Upload</button>
-    </div>
-</form>
-
-{% endif %}
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                <strong>{{message|safe}}</strong>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h6 class="bd-title" id="content" >{{order}}</h6>
+        <br>
+        <h6 class="bd-title" id="content" >{{warning}}</h6>
+        <br>
+        <form method = "POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group mb-3" >
+                <input type="file" class="form-control" id="inputGroupFile02" name="file">
+                <button type="submit" class="btn btn-outline-light">Upload</button>
+            </div>
+        </form>
+    {% endif %}
 
 {% endblock %}

@@ -55,7 +55,6 @@ pytz==2021.1
 six==1.16.0
 sqlparse==0.4.1
 toml==0.10.2
-
 ```
 
 ### Instalando
@@ -107,7 +106,7 @@ http://127.0.0.1:8000/athlete/43578
 
 ## ✍️ Autor <a name = "autor"></a>
 
-- [@marcelocmatos](https://github.com/marcelocmatos) - 
+- [Marcelo Cabral de Matos (@marcelocmatos)](https://github.com/marcelocmatos) - Desenvolvedor Python Júnior
 
 
 ## 🌳 Árvore do Projeto <a name = "arvore"></a>
