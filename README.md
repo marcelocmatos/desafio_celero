@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.django-rest-framework.org/img/logo.png" alt="Django REST API Logo"></a>
+ <img width=200px height=200px src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/136893056/original/c077ae2c46497ef39ba6db4b67a2b066d202bc0b/make-restful-api-using-django-rest-framework.png" alt="Django REST API"></a>
 </p>
 
 <h3 align="center">Desafio Celero (Python 3 e Django Rest Framework)</h3>
@@ -14,17 +14,16 @@
 ## 📝 Conteúdo
 
 - [Sobre](#sobre)
-- [Iniciando](#getting_started)
-- [Como Usar a API](#usage)
-- [Usado no Projeto](#built_using)
-- [Testes realizados](#tests)
-- [Authors](#authors)
+- [Iniciando](#iniciando)
+- [Como Usar a API](#como_usar)
+- [Usado no Projeto](#usado_no_projeto)
+- [Testes realizados](#testes)
+- [Autor](#autor)
 - [Árvore do Projeto](#arvore)
 
 ## 🧐 Sobre <a name = "sobre"></a>
 
-A finalidade deste desafio é testar as habilidades e conhecimento com Python 3 e Django Rest Framework. O objetivo será criar uma API rest para servir os dados do dataset “120 years of Olympic history: athletes and results” presente no Kaggle (https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results#
-athlete_events.csv)
+A finalidade deste desafio é testar as habilidades e conhecimento com Python 3 e Django Rest Framework. O objetivo será criar uma API rest para servir os dados do dataset “120 years of Olympic history: athletes and results” presente no Kaggle (https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results#athlete_events.csv)
 
 ## 🏁 Iniciando <a name = "iniciando"></a>
 
@@ -67,7 +66,7 @@ No powershell, digitar o comando abaixo para instalar todos os pacotes usados no
 pip install -r requirements.txt
 ```
 
-## 🔧 Testes realizados <a name = "tests"></a>
+## 🔧 Testes realizados <a name = "testes"></a>
 
 Como poderão realizar os testes automatizados.
 
@@ -83,7 +82,7 @@ Ainda não desenvolvidos
 
 Os testes serão no padrão do pytest
 
-## 🎈 Como Usar a API <a name="usage"></a>
+## 🎈 Como Usar a API <a name="como_usar"></a>
 
 - Para acessar a API você vai na página principal localizada no endereço padrão do Django: http://127.0.0.1:8000/.
 - Para acessar o modelo todos os dados da API, vá na página pdrão da API: http://127.0.0.1:8000/athlete/
@@ -99,7 +98,7 @@ http://127.0.0.1:8000/athlete/43578
 ```
 
 
-## ⛏️ Usado no Projeto <a name = "built_using"></a>
+## ⛏️ Usado no Projeto <a name = "usado_no_projeto"></a>
 
 - [Python](https://www.python.org/) - Language
 - [Django](https://www.djangoproject.com/) - Web Framework
