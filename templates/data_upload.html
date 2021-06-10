@@ -1,3 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+CSV File Upload
+{% endblock %}
+
+{% block content%}
+
 {% if messages %}
     {% for message in messages %}
         <div>
@@ -5,12 +13,17 @@
         </div>
     {% endfor %}
 {% else %}
-{{order}}
+<h6 class="bd-title" id="content" >{{order}}</h6>
+<br>
+<p>ONLY ACCPETS CSV FILES!!!!</p>
 <form method = "POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <label>Upload a file</label>
-    <input type="file" name="file">
-    <p>ONLY ACCPETS CSV FILES!!!!</p>
-    <button type="submit">Upload</button>
+    <div class="input-group mb-3" >
+        <input type="file" class="form-control" id="inputGroupFile02" name="file">
+        <button type="submit" class="btn btn-outline-light">Upload</button>
+    </div>
 </form>
+
 {% endif %}
+
+{% endblock %}

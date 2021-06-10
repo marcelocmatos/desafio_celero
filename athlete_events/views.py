@@ -7,8 +7,8 @@ import pandas as pd
 def upload_data(request):
     template = 'data_upload.html'
     prompt = {
-        'order': ' Order of the CSV must be: "Name","Sex","Age","Height","Weight",\
-            "Team","NOC","Games","Year","Season","City","Sport","Event","Medal"'
+        'order': 'Order of the CSV must be: "Name", "Sex", "Age", "Height", "Weight",\
+            "Team", "NOC", "Games", "Year", "Season", "City", "Sport", "Event", "Medal"'
         }
     if request.method == 'GET':
         return render(request, template, prompt)

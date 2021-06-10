@@ -91,7 +91,7 @@ Os testes serão no padrão do pytest
 http://127.0.0.1:8000/athlete/43578
 ```
 - Para fazer a atualização da base de dados atravéz de um arquivo CSV deve-se acessar a página http://127.0.0.1:8000/upload_csv/
-  - OBS: Para atualizar via CSV deve-se ter no arquivo as seguintes colunas:
+  - <strong>OBS: Para atualizar via CSV deve-se ter no arquivo as seguintes colunas:</strong>
 
 ```
 "Name","Sex","Age","Height","Weight", "Team","NOC","Games","Year","Season","City","Sport","Event","Medal"
@@ -121,6 +121,20 @@ Desafio_Celero
 │  │  ├─ serializers.py
 │  │  └─ viewsets.py
 │  ├─ apps.py
+│  ├─ migrations
+│  │  ├─ 0001_initial.py
+│  │  ├─ 0002_rename_athletesevents_athletes.py
+│  │  ├─ 0003_auto_20210608_2245.py
+│  │  ├─ 0004_rename_athletes_athlete.py
+│  │  ├─ 0005_auto_20210609_2235.py
+│  │  ├─ 0006_auto_20210609_2344.py
+│  │  ├─ 0007_auto_20210609_2346.py
+│  │  ├─ 0008_alter_athlete_id.py
+│  │  ├─ 0009_alter_athlete_id.py
+│  │  ├─ 0010_alter_athlete_id.py
+│  │  ├─ 0011_alter_athlete_event.py
+│  │  ├─ 0012_alter_athlete_event.py
+│  │  └─ __init__.py
 │  ├─ models.py
 │  ├─ tests.py
 │  ├─ urls.py
@@ -137,7 +151,12 @@ Desafio_Celero
 ├─ manage.py
 ├─ README.md
 ├─ requirements.txt
+├─ static
+│  └─ css
+│     ├─ reset.css
+│     └─ style.css
 └─ templates
+   ├─ base.html
    └─ data_upload.html
 
 ```
