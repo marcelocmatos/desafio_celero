@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://www.django-rest-framework.org/img/logo.png" alt="Django REST API Logo"></a>
 </p>
 
 <h3 align="center">Desafio Celero (Python 3 e Django Rest Framework)</h3>
