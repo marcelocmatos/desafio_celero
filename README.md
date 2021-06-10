@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/136893056/original/c077ae2c46497ef39ba6db4b67a2b066d202bc0b/make-restful-api-using-django-rest-framework.png" alt="Django REST API"></a>
+  <a href="https://github.com/marcelocmatos/desafio_celero" rel="noopener">
+ <img width='600px' height=300px src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/136893056/original/c077ae2c46497ef39ba6db4b67a2b066d202bc0b/make-restful-api-using-django-rest-framework.png" alt="Django REST API"></a>
 </p>
 
 <h3 align="center">Desafio Celero (Python 3 e Django Rest Framework)</h3>
