@@ -1,25 +1,23 @@
 from django.db import models
 from django.db.models.fields import UUIDField
-from uuid import uuid4
 
 
 # Create your models here.
 class Athlete(models.Model):
-    id = UUIDField(primary_key=True, default=uuid4, editable=False)
-    name = models.CharField(max_length=255)
-    sex = models.CharField(max_length=1)
-    age = models.IntegerField()
-    height = models.FloatField()
-    weight = models.FloatField()
-    team = models.CharField(max_length=255)
-    noc = models.CharField(max_length=3)
-    games = models.CharField(max_length=255)
-    year = models.IntegerField()
-    season = models.CharField(max_length=10)
-    city = models.CharField(max_length=255)
-    sport = models.CharField(max_length=255)
-    event = models.TextField()
-    medal = models.CharField(max_length=10)
+    name = models.CharField(max_length=255, null=True)
+    sex = models.CharField(max_length=255, null=True)
+    age = models.CharField(max_length=255, null=True)
+    height = models.CharField(max_length=255, null=True)
+    weight = models.CharField(max_length=255, null=True)
+    team = models.CharField(max_length=255, null=True)
+    noc = models.CharField(max_length=255, null=True)
+    games = models.CharField(max_length=255, null=True)
+    year = models.CharField(max_length=255, null=True)
+    season = models.CharField(max_length=255, null=True)
+    city = models.CharField(max_length=255, null=True)
+    sport = models.CharField(max_length=255, null=True)
+    event = models.TextField(null=True)
+    medal = models.CharField(max_length=255, null=True)
     class Meta:
         verbose_name_plural = 'athletes'
     

@@ -13,18 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from os import name
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from athlete_events.api import viewsets as athlete_viewset
+from athlete_events.views import upload_data
 
 route = routers.DefaultRouter()
-route.register(r'athlete', athlete_viewset.AthletesEventsViewSet, basename='Athlete')
+route.register(r'athlete', athlete_viewset.AthletesEventsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('rest_framework.urls')),
     path('', include(route.urls)),
-    path('api/athletes/', include('athlete_events.urls'))
-
+    path('upload_csv/', upload_data, name='upload_data'),
 ]

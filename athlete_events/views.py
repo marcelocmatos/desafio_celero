@@ -1,40 +1,41 @@
-import re
-from rest_framework.response import Response
-from rest_framework.serializers import Serializer
 from .models import Athlete
-from .serializer import AthleteSerializer
-from rest_framework.decorators import api_view
-
-@api_view(['GET'])
-def athlete_list(request):
-    athletes = Athlete.objects.all()
-    serializer = AthleteSerializer(athletes, many=True)
-    return Response(serializer.data)
-
-@api_view(['GET'])
-def athlete_detail(request, pk):
-    athletes = Athlete.objects.get(id=pk)
-    serializer = AthleteSerializer(athletes, many=False)
-    return Response(serializer.data)
+from django.contrib import messages
+from django.shortcuts import render
+import pandas as pd
 
 
-@api_view(['POST'])
-def athlete_create(request):
-    serializer = AthleteSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-    return Response(serializer.data)
+def upload_data(request):
+    template = 'data_upload.html'
+    prompt = {
+        'order': ' Order of the CSV must be: "Name","Sex","Age","Height","Weight",\
+            "Team","NOC","Games","Year","Season","City","Sport","Event","Medal"'
+        }
+    if request.method == 'GET':
+        return render(request, template, prompt)
+    
+    csv_file = request.FILES['file']
+    
+    if not csv_file.name.endswith('.csv'):
+        messages.error(request, 'This is not a csv file')
+    
+    df = pd.read_csv(csv_file)
+    print(df.head())
 
-@api_view(['POST'])
-def athlete_update(request, pk):
-    athlete = Athlete.objects.get(id = pk)
-    serializer = AthleteSerializer(instance=athlete, data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-    return Response(serializer.data)
-
-@api_view(['DELETE'])
-def athlete_delete(request, pk):
-    athlete = Athlete.objects.get(id = pk)
-    athlete.delete()
-    return Response('DELETED')
+    for item in df.values:
+        Athlete.objects.update_or_create(
+            name = item[1],
+            sex = item[2],
+            age = item[3],
+            height = item[4],
+            weight = item[5],
+            team = item[6],
+            noc = item[7],
+            games = item[8],
+            year = item[9],
+            season = item[10],
+            city = item[11],
+            sport = item[12],
+            event = item[13],
+            medal = item[14]    
+        )
+    return render(request, template)
