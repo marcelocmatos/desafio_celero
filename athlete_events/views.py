@@ -19,8 +19,6 @@ def upload_data(request):
         messages.error(request, 'This is not a csv file')
     
     df = pd.read_csv(csv_file)
-    print(df.head())
-
     for item in df.values:
         Athlete.objects.update_or_create(
             name = item[1],
