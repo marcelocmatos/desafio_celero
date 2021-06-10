@@ -17,9 +17,9 @@
 - [Iniciando](#getting_started)
 - [Como Usar a API](#usage)
 - [Usado no Projeto](#built_using)
-[//]: - [Testes realizados](#tests)
+- [Testes realizados](#tests)
 - [Authors](#authors)
-- [árvore do Projeto](#arvore)
+- [Árvore do Projeto](#arvore)
 
 ## 🧐 Sobre <a name = "sobre"></a>
 
@@ -67,25 +67,21 @@ No powershell, digitar o comando abaixo para instalar todos os pacotes usados no
 pip install -r requirements.txt
 ```
 
-[//]: ## 🔧 Testes realizados <a name = "tests"></a>
+## 🔧 Testes realizados <a name = "tests"></a>
 
-[//]: Como realizar os testes automatizados.
+Como poderão realizar os testes automatizados.
 
-[//]: ### Quais os principais testes realizados
+ ### Quais os principais testes realizados
 
-[//]: Explain what these tests test and why
+Ainda não desenvolvidos
 
-[//]: ```
-[//]: Give an example
-[//]: ```
+ ```
+ Aqui serão exibidos os testes
+ ```
 
-[//]: ### codificação dos testes
+### codificação dos testes
 
-[//]: testes padrão do pytest
-
-[//]: ```
-[//]: Give an example
-[//]: ```
+Os testes serão no padrão do pytest
 
 ## 🎈 Como Usar a API <a name="usage"></a>
 
@@ -116,3 +112,33 @@ http://127.0.0.1:8000/athlete/43578
 
 
 ## 🌳 Árvore do Projeto <a name = "arvore"></a>
+
+```
+Desafio_Celero
+├─ .gitignore
+├─ athlete_events
+│  ├─ admin.py
+│  ├─ api
+│  │  ├─ serializers.py
+│  │  └─ viewsets.py
+│  ├─ apps.py
+│  ├─ models.py
+│  ├─ tests.py
+│  ├─ urls.py
+│  ├─ views.py
+│  └─ __init__.py
+├─ athlete_events.csv
+├─ db.sqlite3
+├─ desafio_celero
+│  ├─ asgi.py
+│  ├─ settings.py
+│  ├─ urls.py
+│  ├─ wsgi.py
+│  └─ __init__.py
+├─ manage.py
+├─ README.md
+├─ requirements.txt
+└─ templates
+   └─ data_upload.html
+
+```
